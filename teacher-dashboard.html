@@ -1,57 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teacher Dashboard</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body class="bg-gray-100">
-    <nav class="bg-white shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <i class="fas fa-chalkboard-teacher text-blue-500 mr-2"></i>
-                    <span class="text-xl font-semibold">Teacher Dashboard</span>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <span class="text-gray-700">Welcome, <span id="userName"></span></span>
-                    <button onclick="logout()" class="px-3 py-2 rounded-md text-sm font-medium text-red-600 hover:bg-red-50">
-                        <i class="fas fa-sign-out-alt mr-1"></i> Logout
-                    </button>
-                </div>
+<body>
+    <header class="dashboard-header">
+        <div>
+            <h1><i class="fas fa-chalkboard-teacher"></i> Teacher Dashboard</h1>
+        </div>
+        <div class="user-info">
+            <span id="userName" class="mr-3"></span>
+            <button id="logoutBtn" class="btn btn-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3><i class="fas fa-users"></i> Total Students</h3>
+                <div class="stat-value" id="totalStudents">0</div>
+            </div>
+            <div class="stat-card">
+                <h3><i class="fas fa-check-circle"></i> Present Today</h3>
+                <div class="stat-value" id="presentToday">0</div>
+            </div>
+            <div class="stat-card">
+                <h3><i class="fas fa-times-circle"></i> Absent Today</h3>
+                <div class="stat-value" id="absentToday">0</div>
             </div>
         </div>
-    </nav>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <a href="attendance.html" class="bg-green-500 text-white p-6 rounded-lg hover:bg-green-600 transition">
-                <i class="fas fa-check-circle fa-2x mb-2"></i>
-                <h3 class="text-lg font-semibold">Mark Attendance</h3>
-            </a>
-            <a href="class-report.html" class="bg-blue-500 text-white p-6 rounded-lg hover:bg-blue-600 transition">
-                <i class="fas fa-chart-bar fa-2x mb-2"></i>
-                <h3 class="text-lg font-semibold">Class Reports</h3>
-            </a>
-        </div>
-
-        <div class="bg-white shadow rounded-lg p-6">
-            <h2 class="text-xl font-semibold mb-4">Today's Classes</h2>
-            <div class="space-y-4">
-                <div class="border-b pb-4">
-                    <h3 class="font-medium">Computer Science 101</h3>
-                    <p class="text-gray-600">10:00 AM - 11:30 AM</p>
-                    <p class="text-sm text-gray-500">25 students enrolled</p>
-                </div>
-                <div class="border-b pb-4">
-                    <h3 class="font-medium">Mathematics 201</h3>
-                    <p class="text-gray-600">1:00 PM - 2:30 PM</p>
-                    <p class="text-sm text-gray-500">18 students enrolled</p>
-                </div>
+        
+        <section class="card">
+            <h2><i class="fas fa-calendar-check"></i> Attendance Management</h2>
+            <div class="attendance-form">
+                <!-- Form will be added here -->
             </div>
-        </div>
-    </div>
-    <script src="app.js"></script>
+        </section>
+    </main>
+
+    <script src="client.js"></script>
 </body>
 </html>
