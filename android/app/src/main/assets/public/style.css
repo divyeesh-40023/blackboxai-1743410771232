@@ -1,0 +1,64 @@
+/* Custom styles for attendance system */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navigation active link indicator */
+nav a.active {
+    background-color: #EFF6FF;
+    color: #1D4ED8;
+}
+
+/* Table row hover effect */
+tbody tr:hover {
+    background-color: #F9FAFB;
+}
+
+/* Status badges */
+.status-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-present {
+    background-color: #D1FAE5;
+    color: #065F46;
+}
+
+.status-absent {
+    background-color: #FEE2E2;
+    color: #B91C1C;
+}
+
+/* Form input focus styles */
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+/* Button transitions */
+button {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+}
+
+/* Loading spinner */
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+    }
+}
