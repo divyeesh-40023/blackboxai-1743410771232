@@ -1,0 +1,18 @@
+# Dependency directories
+node_modules/
+.android/
+.idea/
+.vscode/
+
+# Build files
+android/app/build/
+android/.gradle/
+android/build/
+www/
+
+# Environment files
+.env
+*.env
+
+# Capacitor
+capacitor.config.json
