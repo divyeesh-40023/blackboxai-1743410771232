@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="max-w-md w-full p-8 bg-white shadow-lg rounded-lg">
+        <div class="text-center mb-8">
+            <i class="fas fa-user-plus text-4xl text-blue-500 mb-4"></i>
+            <h1 class="text-2xl font-bold text-gray-800">Student Registration</h1>
+        </div>
+        <form id="registerForm" class="space-y-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Full Name</label>
+                <input type="text" required class="mt-1 block w-full px-3 py-2 border rounded-md">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" required class="mt-1 block w-full px-3 py-2 border rounded-md">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" required class="mt-1 block w-full px-3 py-2 border rounded-md">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Student ID</label>
+                <input type="text" required class="mt-1 block w-full px-3 py-2 border rounded-md">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Profile Photo</label>
+                <input type="file" accept="image/*" class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100">
+            </div>
+            <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">
+                <i class="fas fa-user-plus mr-2"></i> Register
+            </button>
+        </form>
+        <div class="mt-4 text-center">
+            <a href="index.html" class="text-blue-600 hover:text-blue-800">Already have an account? Login</a>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
